@@ -61,6 +61,23 @@ console.log(sumBelow(10))
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
 var range = function(x, y) {
+    var min = 0;
+    var max = 0;
+    if (x < y){
+        min = x;
+        max = y;
+    } else{
+        min = y;
+        max = x;
+    }
+    if (max - min === 2){ return [max-1]}
+    
+    else {
+      var res = range(min, max-1);
+      res.push(max-1)
+      return res;
+    }
+    
 };
 
 // 7. Compute the exponent of a number.
