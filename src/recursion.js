@@ -54,9 +54,10 @@ var sumBelow = function(n) {
     if (n === 0){return 0};
     if (n < 0) {adjust = 1}
     if (n > 0) {adjust = -1}
-    return n + sumBelow(n-1) + adjust; 
+    return n + sumBelow(n + adjust) + adjust; 
 };
 
+console.log(sumBelow(10))
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
 var range = function(x, y) {
